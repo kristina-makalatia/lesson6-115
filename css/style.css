@@ -1,0 +1,64 @@
+.block-wraper {
+	width: 400px;
+	height: 400px;
+	background: rgb(131,58,180);
+	background: linear-gradient(90deg, rgba(131,58,180,1) 25%, rgba(29,245,253,1) 58%, rgba(252,176,69,1) 100%);
+	position: relative;
+/*	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	transition-delay: 2s; */
+	transition: all 0.5s linear 2s;
+}
+.child-box {
+	width: 150px;
+	height: 150px;
+	background-color: yellow;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) rotate(45deg);
+	transition: all 0.5s linear;
+}
+.block-wraper:hover {
+	background-color: blue;
+}
+.child-box:hover {
+	background-color: red;
+	transform: translate(-50%,-50%) rotate(0deg);
+}
+/*.block-wraper:hover .child-box {
+	background-color: green;
+}*/
+.text:hover {
+	text-transform: uppercase;
+	font-weight: 900;
+	color: red;
+	font-style: italic;
+}
+
+/*keyframes animation*/
+.chat-icon {
+	height: 100px;
+	animation: chatanimation2 5s infinite 2s alternate;
+	/*position: absolute;*/
+}
+.animation-block {
+	/*position: relative;*/
+}
+
+/*@keyframes chatanimation {
+	0% {left: 200px; transform: rotate(0deg);}
+	25% {left: 400px; transform: rotate(360deg);}
+	50% {left: 600px; transform: rotate(45deg);}
+	75% {left: 800px; transform: rotate(360deg);}
+	100% {left: 1000px; transform: rotate(45deg);}
+}*/
+
+@keyframes chatanimation2 {
+	0% {transform: translateX(200px) rotate(0deg);}
+	25% {transform: translateX(400px) rotate(360deg);}
+	50% {transform: translateX(600px) rotate(45deg);}
+	75% {transform: translateX(800px) rotate(360deg);}
+	100% {transform: translateX(1000px) rotate(45deg);}
+}
